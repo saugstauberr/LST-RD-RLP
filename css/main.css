@@ -7,6 +7,22 @@ body {
     overflow: hidden;
 }
 
+div {
+    border: #4fc3f7 solid 2px; /* Fresh blue border */
+}
+
+.row-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Centered vertically */
+}
+
+.row-div > div {
+    margin: 10px; /* Space between elements */
+    padding: 20px;
+}
+
 .center {
     margin: 30px auto;
     width: 80%; /* Slightly wider for better readability */
