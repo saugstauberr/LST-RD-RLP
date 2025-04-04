@@ -1,52 +1,79 @@
 body {
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    font-family: 'Roboto';
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .center {
-        margin: 30px auto;
-        width: 70%;
-        padding: 10px;
-        text-align: center;
-}
-
-.converter {
-
+    margin: 30px auto;
+    width: 80%; /* Slightly wider for better readability */
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    background-color: #1e1e1e; /* Slightly lighter background for sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 h1 {
-    color: #5bd8ee;
+    color: #4fc3f7; /* Fresh blue accent */
     text-transform: uppercase;
-    text-shadow: #2ccbe7 0px 0px 4px;
+    text-shadow: 0 0 6px #4fc3f7; /* Glow effect */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-h3 {
-    color: #2ccbe7;
-}
-
-.result {
-   
+h2, h3 {
+    color: #81d4fa; /* Slightly lighter blue for headings */
+    margin-bottom: 15px;
 }
 
 textarea {
-    height: 50px;
-    background-color: rgb(17, 17, 17);
-    color: #fff;
-    border: 1px solid #2ccbe7;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    font-family: 'Roboto';
+    width: 90%; /* Full width for better usability */
+    height: 80px; /* Increased height */
+    background-color: #1e1e1e; /* Match section background */
+    color: #e0e0e0;
+    border: 2px solid #4fc3f7; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    resize: none; /* Disable resizing for consistency */
+    margin-bottom: 10px;
 }
 
 button {
-    background-color: #2ccbe7;
-    color: #fff;
+    background-color: #4fc3f7; /* Fresh blue accent */
+    color: #121212; /* Dark text for contrast */
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #81d4fa; /* Lighter blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+button:active {
+    background-color: #29b6f6; /* Darker blue on click */
+    transform: scale(0.95); /* Slight shrink effect */
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #1e1e1e; /* Match section background */
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left; /* Align text for better readability */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow */
 }
