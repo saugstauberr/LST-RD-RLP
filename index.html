@@ -26,9 +26,10 @@
         </div>
         <div class="converter center">
             <h2>Eingabe</h2>
-            <input type="text" pattern="\d*" inputmode="numeric" placeholder="3-stellige Nummern eingeben (mehrere möglich, bspw 001500600)" id="codes" />
+            <textarea onkeyup="splitInputText()" pattern="\d*" inputmode="numeric" placeholder="3-stellige Nummern eingeben (mehrere möglich, bspw 001500600)" id="codes"></textarea>
             <br>
-            <button onclick="convert()">Einsatzmeldung anzeigen</button>
+            <button onclick="clearInputText()" class="clear-btn">Löschen</button>
+            <button onclick="convertInputText()">Einsatzmeldung anzeigen</button>
         </div>
         <div class="result center">
             <h2>Meldung</h2>

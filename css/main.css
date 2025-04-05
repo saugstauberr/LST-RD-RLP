@@ -43,7 +43,7 @@ h2, h3 {
     font-size: 1.2rem; /* Adjusted for readability */
 }
 
-input {
+textarea {
     width: 90%; /* Slightly smaller width to fit within the container */
     max-width: 100%; /* Prevent it from exceeding the container's width */
     height: 48px;
@@ -76,6 +76,11 @@ button {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(255, 111, 97, 0.4); /* Subtle shadow */
+}
+
+.clear-btn {
+    background-color: #4e4e4e; 
+    box-shadow: 0 4px 8px rgba(57, 57, 57, 0.4); /* Subtle shadow */
 }
 
 .result {
