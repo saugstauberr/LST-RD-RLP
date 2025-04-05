@@ -43,7 +43,7 @@ h2, h3 {
     font-size: 1.2rem; /* Adjusted for readability */
 }
 
-textarea {
+input {
     width: 90%; /* Slightly smaller width to fit within the container */
     max-width: 100%; /* Prevent it from exceeding the container's width */
     height: 48px;

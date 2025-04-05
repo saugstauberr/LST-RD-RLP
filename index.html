@@ -26,7 +26,8 @@
         </div>
         <div class="converter center">
             <h2>Eingabe</h2>
-            <textarea placeholder="Nr. eingeben, mit Komma trennbar" id="codes"></textarea><br>
+            <input type="text" pattern="\d*" inputmode="numeric" placeholder="3-stellige Nummern eingeben (mehrere möglich, bspw 001500600)" id="codes" />
+            <br>
             <button onclick="convert()">Einsatzmeldung anzeigen</button>
         </div>
         <div class="result center">
