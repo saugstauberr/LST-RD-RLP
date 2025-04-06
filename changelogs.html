@@ -11,7 +11,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/non-scroll.css">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Leitstellen Übersetzer">
@@ -23,24 +22,23 @@
     </head>
     <body>
         <div class="center">
-            <h1>RD RLP Einsatzmeldung</h1>
-        <a href="changelogs.html">Changelogs</a> - <a>Version 1.0.0</a>
+            <h1>Changelogs</h1>
+        <a href="index.html">Zurück zum Umwandler</a>
         </div>
         <div class="center">
-            <h2>Eingabe</h2>
-            <textarea onkeyup="splitInputText();convertInputText()" pattern="\d*" inputmode="numeric" placeholder="3-stellige Nummern eingeben (mehrere möglich, bspw 001500600)" id="codes"></textarea>
-            <br>
-            <button onclick="clearInputText()" class="">Löschen</button>
-            <!--<button onclick="convertInputText()">Einsatzmeldung anzeigen</button>-->
+            <h2>Version 1.0.0</h2>
+            <a>Veröffentlicht: <b>06.04.2025</b></a>
+            <ul>
+                <li>Leitstellen-Einsatzmeldungen können von Zahlen in Meldung umgewandelt werden</li>
+                <li>Einen "Umwandel"-Button gibt es nicht mehr, Text wird direkt nach eingeben umgewandelt</li>
+                <li>Zahlen können einfach hintereinander geschrieben werden (ein Code ist immer 3 Zahlen lang, danach
+                    wird automatisch ein Leerzeichen eingefügt)</li>
+            </ul>
         </div>
-        <div class="center">
-            <h2>Meldung</h2>
-            <h3 id="ResultTextBox">...</h3>
-        </div>
+        
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
         <script src="js/index.js" async defer></script>
         <script src="js/alarms_rlp.js" async defer></script>
     </body>

@@ -1,8 +1,15 @@
+document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+
+
 function convertInputText() {    
     var codes = document.getElementById("codes").value.toString().split(" ")
     var result = "";
 
    
+    if (document.getElementById("codes").value.toString() == "") {
+        document.getElementById("ResultTextBox").innerHTML = "..."
+        return;
+    }
 
     for (const rawCode of codes) {
         code = rawCode

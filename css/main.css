@@ -7,12 +7,11 @@ body {
     font-family: 'Poppins', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh;
 }
 
 .center {
@@ -78,11 +77,6 @@ button {
     box-shadow: 0 4px 8px rgba(255, 111, 97, 0.4); /* Subtle shadow */
 }
 
-.clear-btn {
-    background-color: #4e4e4e; 
-    box-shadow: 0 4px 8px rgba(57, 57, 57, 0.4); /* Subtle shadow */
-}
-
 .result {
     margin-top: 20px;
     padding: 15px;
@@ -117,4 +111,13 @@ button {
     textarea {
         height: 70px; /* Reduced height for smaller screens */
     }
+}
+
+a {
+    color: #ff6f61; /* Coral accent */
+}
+
+a:link, a:visited {
+    color: #ff6f61; /* Coral accent */
+    font-weight: 600;
 }
