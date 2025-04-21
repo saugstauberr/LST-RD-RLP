@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
     document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+    updateNumpadKeys();
+    updateInputText();
 })
 
 function numpad(key) {
@@ -17,6 +19,7 @@ function numpad(key) {
     }
     splitInputText();
     updateInputText();
+    updateNumpadKeys();
 }
 
 function updateInputText() {    
@@ -55,6 +58,57 @@ function clearInputText() {
     document.getElementById("input-text").innerHTML = "";
 }
 
+function updateNumpadKeys() {
+    // Looks into the input text, then looks which number is in alarms_rlp list, if its not there, disables button
+    var inputText = document.getElementById("input-text").innerHTML.toString()
+    var spaceRemovalIterations = Math.floor(inputText.length / 4);
+
+    var currentNumber;
+    for(var i = 0; i <= spaceRemovalIterations; i++) {
+        inputText = inputText.substring(inputText.indexOf(" ") + 1)
+    }
+
+    if(inputText.length == 3) {
+        currentNumber = "";
+    } else {
+        currentNumber = inputText;
+    }
+
+    console.log(currentNumber);
+
+    var possibleNextInput = Object.keys(alarms_rlp);
+
+
+    // Makes all next inputs 3 characters long
+    // This is done by adding leading zeros to the numbers
+    var targetLength = 3;
+    for (var i = 0; i < possibleNextInput.length; i++) {
+        possibleNextInput[i] = "0".repeat(targetLength - possibleNextInput[i].length) + possibleNextInput[i];
+
+    }
+
+    // Look up which next numbers are possible
+    // This is done by filtering the possibleNextInput array to only include numbers that start with the current number
+    possibleNextInput = possibleNextInput.filter(key => key.startsWith(currentNumber));
+
+    for (var i = 0; i < possibleNextInput.length; i++) {
+        possibleNextInput[i] = possibleNextInput[i].substring(currentNumber.length, currentNumber.length + 1);
+    }
+
+    // Delete all duplicates in possibleNextInput
+    possibleNextInput = [...new Set(possibleNextInput)];
+
+    // Disable all numpad keys
+    for (var i = 0; i <= 9; i++) {
+        toggleNumKey(i, false);
+    }
+    // Enable only the keys that are in possibleNextInput
+    for (var i = 0; i < possibleNextInput.length; i++) {
+        toggleNumKey(possibleNextInput[i], true);
+    }
+
+    console.log(possibleNextInput);
+}
 
 function splitInputText() {
     // Get the raw input text without any formatting
@@ -70,17 +124,6 @@ function splitInputText() {
     document.getElementById("input-text").innerHTML = formattedText;
 }
 
-/*
-
-function clearInputText() {
-    // Clear the input field
-    document.getElementById("codes").value = "";
-    
-    // Clear the result text box
-    document.getElementById("ResultTextBox").innerHTML = "...";
-}
-
-*/
 
 function toggleNumKey(key, state) {
     if(state) {
