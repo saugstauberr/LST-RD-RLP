@@ -1,5 +1,7 @@
-document.documentElement.requestFullscreen({ navigationUI: 'hide' });
 
+$(document).ready(function() {
+    document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+})
 
 function convertInputText() {    
     var codes = document.getElementById("codes").value.toString().split(" ")

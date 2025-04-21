@@ -22,26 +22,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik&family=Work+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="center">
-            <h1>RD RLP Einsatzmeldung</h1>
-        <a href="changelogs.html">Changelogs</a> - <a>Version 1.0.0</a>
+        <div class="nav-bar">
+            <p class="nav-title">RD-Einsatzmelder</p>
         </div>
+        <div class="nav-subbar">
+            <p><a class="nav-text" href="changelogs.html">Changelogs</a> -  Version 1.0.0</p>
+        </div>
+
+        
+        <!--
         <div class="center">
             <h2>Eingabe</h2>
             <textarea onkeyup="splitInputText();convertInputText()" pattern="\d*" inputmode="numeric" placeholder="3-stellige Nummern eingeben (mehrere möglich, bspw 001500600)" id="codes"></textarea>
             <br>
             <button onclick="clearInputText()" class="">Löschen</button>
-            <!--<button onclick="convertInputText()">Einsatzmeldung anzeigen</button>-->
         </div>
         <div class="center">
             <h2>Meldung</h2>
             <h3 id="ResultTextBox">...</h3>
         </div>
+        -->
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
         <script src="js/index.js" async defer></script>
-        <script src="js/alarms_rlp.js" async defer></script>
+        <script src="js/alarm_codes/alarms_rlp.js" async defer></script>
     </body>
 </html>
