@@ -24,7 +24,7 @@ body {
 
 .nav-bar {
     background-color: #353535;
-    background-image: url("/img/nav-bar-bg-min.jpg"); /* Placeholder for background image */
+    background-image: url("../img/nav-bar-bg-min.jpg"); /* Placeholder for background image */
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,7 +132,7 @@ p:empty:not(:focus)::before {
 }
 
 .button-clickme {
-    background-image: url('/img/click-me-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    background-image: url('../img/click-me-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
     background-position: 0.4em 0.3em, 0;
     background-size: 1.3em, 100%;
     background-repeat: no-repeat;
@@ -141,7 +141,7 @@ p:empty:not(:focus)::before {
 }
 
 .button-help {
-    background-image: url('/img/help-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    background-image: url('../img/help-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
     background-position: 0.1em 0.1em, 0;
     background-size: 1.8em, 100%;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ p:empty:not(:focus)::before {
 }
 
 .button-settings {
-    background-image: url('/img/settings-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    background-image: url('../img/settings-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
     background-position: 0.3em 0.3em, 0;
     background-size: 1.5em, 100%;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ p:empty:not(:focus)::before {
 }
 
 .button-check {
-    background-image: url('/img/check-min.png'), linear-gradient(180deg, #64c25b 5%, #418034 85%);
+    background-image: url('../img/check-min.png'), linear-gradient(180deg, #64c25b 5%, #418034 85%);
     background-position: 0.2em 0.1em, 0;
     background-size: 1.9em, 100%;
     background-repeat: no-repeat;
