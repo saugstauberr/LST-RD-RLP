@@ -159,7 +159,7 @@ p:empty:not(:focus)::before {
     font-weight: 600;
     font-size: 1.2em;
     overflow: scroll !important;
-    margin: auto;
+    margin-bottom: auto;
 }
 
 .result-row {
