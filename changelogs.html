@@ -9,8 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/changelogs.css">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Leitstellen Übersetzer">
@@ -21,25 +21,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik&family=Work+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="center">
-            <h1>Changelogs</h1>
-        <a href="index.html">Zurück zum Umwandler</a>
+        <div class="nav-bar">
+            <p class="nav-title">Versionsverlauf</p>
+            <p class="nav-version">Version 1.0.1pub</p>
+            <p class="nav-motd">Verfügbar für: Rheinl.-Pfalz</p>
         </div>
-        <div class="center">
-            <h2>Version 1.0.0</h2>
-            <a>Veröffentlicht: <b>06.04.2025</b></a>
-            <ul>
-                <li>Leitstellen-Einsatzmeldungen können von Zahlen in Meldung umgewandelt werden</li>
-                <li>Einen "Umwandel"-Button gibt es nicht mehr, Text wird direkt nach eingeben umgewandelt</li>
-                <li>Zahlen können einfach hintereinander geschrieben werden (ein Code ist immer 3 Zahlen lang, danach
-                    wird automatisch ein Leerzeichen eingefügt)</li>
-            </ul>
+        <div class="nav-subbar">
+            <p class="nav-text"><a class="button button-clickme" href="index.html">Zurück zur Startseite</a></p>
         </div>
-        
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <script src="js/index.js" async defer></script>
-        <script src="js/alarms_rlp.js" async defer></script>
+        <div class="entries">
+            <div class="entry">
+                <p class="entry-version">Version 1.0.1pub</p>
+                    <a>Veröffentlicht: <b>21.04.2025</b></a>
+                <ul>
+                    <li>Neues UI-Design</li>
+                    <li>Besseres Eingabefeld</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <p class="entry-version">Version 1.0.0</p>
+                    <a>Veröffentlicht: <b>06.04.2025</b></a>
+                <ul>
+                    <li>Leitstellen-Einsatzmeldungen können von Zahlen in Meldung umgewandelt werden</li>
+                    <li>Einen "Umwandel"-Button gibt es nicht mehr, Text wird direkt nach eingeben umgewandelt</li>
+                    <li>Zahlen können einfach hintereinander geschrieben werden (ein Code ist immer 3 Zahlen lang, danach
+                        wird automatisch ein Leerzeichen eingefügt)</li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>

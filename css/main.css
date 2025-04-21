@@ -176,17 +176,9 @@ p:empty:not(:focus)::before {
     margin-bottom: auto;
 }
 
-.result-row {
-
-}
-
 .result-code {
     background-color: #803b34;
     padding: 0.1em 0.6em;
     border-radius: 0.5em;
     margin-right: 0.5em;
-}
-
-.result-text {
-
 }
