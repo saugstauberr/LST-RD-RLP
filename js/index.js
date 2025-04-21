@@ -16,24 +16,26 @@ function numpad(key) {
             break;
     }
     splitInputText();
+    convertInputText();
 }
 
 function convertInputText() {    
-    var codes = document.getElementById("codes").value.toString().split(" ")
+    var codes = document.getElementById("input-text").innerHTML.toString().split(" ")
     var result = "";
 
    
-    if (document.getElementById("codes").value.toString() == "") {
-        document.getElementById("ResultTextBox").innerHTML = "..."
+    if (document.getElementById("input-text").innerHTML.toString() == "") {
+        document.getElementById("result").innerHTML = ""
         return;
     }
 
+    var result;
     for (const rawCode of codes) {
-        code = rawCode
-        result = result + code + ": " + alarms_rlp[parseInt(code)] + "<br><br>"
+        result += '<p class="result-row"><a class="result-code">' + rawCode + '</a> <a class="result-text">' + 
+        alarms_rlp[parseInt(rawCode)] + '</a></p>'
     }
 
-    document.getElementById("ResultTextBox").innerHTML = result
+    document.getElementById("result").innerHTML = result;
 }
 
 function addInputText(char) {

@@ -63,6 +63,7 @@ body {
 
 .input {
     justify-self: flex-end;
+    
     width: 100%;
     margin-bottom: 2em;
 }
@@ -158,7 +159,7 @@ p:empty:not(:focus)::before {
     font-weight: 600;
     font-size: 1.2em;
     overflow: scroll !important;
-    
+    margin: auto;
 }
 
 .result-row {
