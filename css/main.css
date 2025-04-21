@@ -8,8 +8,11 @@ body {
     margin: 0;
     padding: 0;
     flex-direction: column;
+    max-height: 100vh;
     min-height: 100vh;
     font-size: 1em;
+    user-select: none;
+    display: flex;
 }
 
 .nav-bar {
@@ -20,10 +23,26 @@ body {
     background-size: cover;
     background-blend-mode:overlay;
     text-align: center;
+    
+}
+
+.nav-version, .nav-motd {
+    position: absolute;
+    opacity: 0.4;
+    top: 6.5em;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.nav-version {
+    left: 0.5em;
+}
+.nav-motd {
+    right: 0.5em;
 }
 
 .nav-subbar {
-    background-color: #161616;
+    background-color: #0f0f0f;
     text-align: center;
 }
 
@@ -42,7 +61,51 @@ body {
     padding: 0rem 1rem;
 }
 
-.button {
+.input {
+    justify-self: flex-end;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.input-text {
+    background-color: #0f0f0f;
+    margin: 0em;
+    padding: 0.3em 0.6em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.numpad {
+    background-color: #0f0f0f;
+    height: 17em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.numpad-button {
+    color: #f5f5f5; /* Soft white text */
+    background-image: linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    border-radius: 0.0em;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0px 2px 4px rgb(175, 69, 59); /* Subtle shadow */
+    font-size: 2.2em;
+    padding: 0.1em 5%;
+    margin: 0.0em;
+}
+
+.numpad-button:clicked {
+    background-image: linear-gradient(180deg, #6e3a34 5%, #3b1c18 85%);
+    box-shadow: 0px 2px 4px rgb(175, 69, 59); /* Subtle shadow */
+}
+
+p:empty:not(:focus)::before {
+    content: attr(data-placeholder);
+  }
+
+  .button {
     color: #f5f5f5; /* Soft white text */
     background-image: linear-gradient(180deg, #ca675e 5%, #803b34 85%);
     padding: 0.3em 0.6em;
@@ -55,9 +118,60 @@ body {
 
 .button-clickme {
     background-image: url('/img/click-me-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
-    background-position: 101% -60%, 0;
-    background-size: 23%, 100%;
+    background-position: 0.4em 0.3em, 0;
+    background-size: 1.3em, 100%;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    padding-right: 2.1em;
+    background-blend-mode: overlay, normal;
+    padding-left: 2.1em;
+}
+
+.button-help {
+    background-image: url('/img/help-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    background-position: 0.1em 0.1em, 0;
+    background-size: 1.8em, 100%;
+    background-repeat: no-repeat;
+    padding-left: 1.7em;
+    background-blend-mode: overlay, normal;
+}
+
+.button-settings {
+    background-image: url('/img/settings-min.png'), linear-gradient(180deg, #ca675e 5%, #803b34 85%);
+    background-position: 0.3em 0.3em, 0;
+    background-size: 1.5em, 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay, normal;
+    padding-left: 2.1em;
+}
+
+.button-check {
+    background-image: url('/img/check-min.png'), linear-gradient(180deg, #64c25b 5%, #418034 85%);
+    background-position: 0.2em 0.1em, 0;
+    background-size: 1.9em, 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay, normal;
+    padding-left: 2.1em;
+    box-shadow: 0px 2px 4px #63c057; /* Subtle shadow */
+}
+
+.result {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    overflow: scroll !important;
+    
+}
+
+.result-row {
+
+}
+
+.result-code {
+    background-color: #803b34;
+    padding: 0.1em 0.6em;
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+}
+
+.result-text {
+
 }

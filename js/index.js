@@ -3,6 +3,21 @@ $(document).ready(function() {
     document.documentElement.requestFullscreen({ navigationUI: 'hide' });
 })
 
+function numpad(key) {
+    switch(key) { 
+        case 10: // Back
+            removeInputText();
+            break;
+        case 11: // Delete
+            clearInputText();
+            break;
+        default: // Default
+            addInputText(key);
+            break;
+    }
+    splitInputText();
+}
+
 function convertInputText() {    
     var codes = document.getElementById("codes").value.toString().split(" ")
     var result = "";
@@ -21,9 +36,22 @@ function convertInputText() {
     document.getElementById("ResultTextBox").innerHTML = result
 }
 
+function addInputText(char) {
+    document.getElementById("input-text").innerHTML += char;
+}
+
+function removeInputText() {
+    document.getElementById("input-text").innerHTML = document.getElementById("input-text").innerHTML.slice(0, -1);
+}
+
+function clearInputText() {
+    document.getElementById("input-text").innerHTML = "";
+}
+
+
 function splitInputText() {
     // Get the raw input text without any formatting
-    var inputText = document.getElementById("codes").value.replace(/\s+/g, "");
+    var inputText = document.getElementById("input-text").innerHTML.replace(/\s+/g, "");
 
     // Split the input text into chunks of 3 characters
     var splitText = inputText.match(/.{1,3}/g);
@@ -32,8 +60,10 @@ function splitInputText() {
     var formattedText = splitText ? splitText.join(" ") : "";
 
     // Update the input field with the formatted text
-    document.getElementById("codes").value = formattedText;
+    document.getElementById("input-text").innerHTML = formattedText;
 }
+
+/*
 
 function clearInputText() {
     // Clear the input field
@@ -42,3 +72,5 @@ function clearInputText() {
     // Clear the result text box
     document.getElementById("ResultTextBox").innerHTML = "...";
 }
+
+*/
