@@ -16,18 +16,23 @@ function numpad(key) {
             break;
     }
     splitInputText();
-    convertInputText();
+    updateInputText();
 }
 
-function convertInputText() {    
+function updateInputText() {    
     var codes = document.getElementById("input-text").innerHTML.toString().split(" ")
     var result = "";
 
    
     if (document.getElementById("input-text").innerHTML.toString() == "") {
         document.getElementById("result").innerHTML = ""
+        toggleNumKey("del", false);
+        toggleNumKey("back", false);
         return;
     }
+
+    toggleNumKey("del", true);
+    toggleNumKey("back", true);
 
     var result;
     for (const rawCode of codes) {
@@ -76,3 +81,13 @@ function clearInputText() {
 }
 
 */
+
+function toggleNumKey(key, state) {
+    if(state) {
+        document.getElementById("numpad-" + key).classList.remove("numpad-button-disabled");
+        document.getElementById("numpad-" + key).disabled = false;
+    } else {
+        document.getElementById("numpad-" + key).classList.add("numpad-button-disabled");
+        document.getElementById("numpad-" + key).disabled = true;
+    }
+}
